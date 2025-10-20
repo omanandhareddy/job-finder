@@ -1,0 +1,32 @@
+<nav class="navbar">
+  <div class="logo" (click)="toHome()">JobFinder</div>
+
+  <div class="nav-links">
+    <button (click)="toPost()">Post Job</button>
+    <button (click)="toManage()">Manage Jobs</button>
+    <button (click)="toApplications()">Applications</button>
+    <button (click)="toAnalytics()">Analytics</button>
+  </div>
+</nav>
+
+
+
+<div class="form-container">
+  <h2>Post a Job</h2>
+  <form (ngSubmit)="save()">
+    <input type="text" placeholder="Job Title" [(ngModel)]="job.title" name="title" required />
+    <input type="text" placeholder="Company Name" [(ngModel)]="job.company" name="company" required />
+    <input type="text" placeholder="Location" [(ngModel)]="job.location" name="location" required />
+    <textarea placeholder="Job Description" [(ngModel)]="job.description" name="description"></textarea>
+
+    <select [(ngModel)]="job.experience" name="experience" required>
+      <option value="">Select Experience</option>
+      <option>0-2 years</option>
+      <option>2-5 years</option>
+      <option>5+ years</option>
+    </select>
+
+    <input type="text" placeholder="Salary Range" [(ngModel)]="job.salary" name="salary" />
+    <button type="submit">Post Job</button>
+  </form>
+</div>

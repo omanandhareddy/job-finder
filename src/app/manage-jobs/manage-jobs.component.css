@@ -1,0 +1,218 @@
+.manage-jobs-page {
+  max-width: 1000px;
+  margin: 4rem auto;
+  background: #fff;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  font-family: "Poppins", sans-serif;
+  color: #1e1f24;
+}
+
+.manage-jobs-page h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(90deg, #1e1e1e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.jobs-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+.jobs-table th {
+  background:#fff;
+  color: #1e1e1e;
+  text-align: left;
+  padding: 14px 18px;
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+}
+
+.jobs-table td {
+  background: #f9f9f9;
+  padding: 14px 18px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+.jobs-table tr {
+  transition: all 0.3s ease;
+}
+
+.jobs-table tr:hover td {
+  background: #fffaf0;
+  transform: scale(1.01);
+}
+
+
+.jobs-table input,
+.jobs-table select {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+.jobs-table input:focus,
+.jobs-table select:focus {
+  border-color: #f4b942;
+  box-shadow: 0 0 6px rgba(244, 185, 66, 0.4);
+}
+
+
+.edit-btn,
+.save-btn,
+.delete-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 6px;
+}
+
+.edit-btn {
+ background: #222;
+  color: #fff;
+}
+
+.save-btn {
+  background: #222;
+  color: #fff;
+}
+
+.delete-btn {
+ background: #222;
+  color: #fff;
+}
+
+.edit-btn:hover,
+.save-btn:hover,
+.delete-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+
+@media (max-width: 900px) {
+  .manage-jobs-page {
+    padding: 2rem 1rem;
+  }
+
+  .jobs-table th,
+  .jobs-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .edit-btn,
+  .save-btn,
+  .delete-btn {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+
+.navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(15px);
+  padding: 1rem 4rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #1a1a1a, #444);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: #1e1e1e;
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+  cursor: pointer;
+  padding: 0.3rem 0;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+.nav-links button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.nav-links button:hover {
+  color: var(--accent-color);
+}
+
+.nav-links button:hover::after {
+  width: 100%;
+}
+
+.nav-links button.active {
+  color: var(--accent-color);
+}
+.nav-links button.active::after {
+  width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--gradient);
+  color: var(--text-color);
+  overflow-x: hidden;
+}

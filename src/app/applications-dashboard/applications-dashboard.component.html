@@ -1,0 +1,44 @@
+<nav class="navbar">
+  <div class="logo" (click)="toHome()">JobFinder</div>
+
+  <div class="nav-links">
+    <button (click)="toPost()">Post Job</button>
+    <button (click)="toManage()">Manage Jobs</button>
+    <button (click)="toApplications()">Applications</button>
+    <button (click)="toAnalytics()">Analytics</button>
+  </div>
+</nav>
+
+
+<div class="dashboard-container">
+  <h2>Applications Dashboard</h2>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Candidate Name</th>
+          <th>Email</th>
+          <th>Job ID</th>
+          <th>Applied Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let app of applications">
+          <td>{{ app.candidateName }}</td>
+          <td>{{ app.email }}</td>
+          <td>{{ app.jobId }}</td>
+          <td>{{ app.appliedDate | date: 'short' }}</td>
+          <td>
+            <select [(ngModel)]="app.status" (change)="updateStatus(app)">
+              <option>Applied</option>
+              <option>Reviewed</option>
+              <option>Rejected</option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

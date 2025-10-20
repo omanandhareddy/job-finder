@@ -1,0 +1,48 @@
+<nav class="navbar">
+  <div class="logo" (click)="toHome()">JobFinder</div>
+
+  <div class="nav-links">
+    <button (click)="toApplied()">Applied Jobs</button>
+    <button (click)="toApply()">Apply Jobs</button>
+    <button (click)="toJobs()">Jobs</button>
+    <button (click)="toDetails()">Job Details</button>
+  </div>
+</nav>
+
+<div class="apply-container">
+  <h2>Apply for Job</h2>
+  <form (ngSubmit)="submit()">
+    <input
+      type="text"
+      placeholder="Your Name"
+      [(ngModel)]="application.candidateName"
+      name="name"
+      required
+    />
+    <input
+      type="email"
+      placeholder="Email"
+      [(ngModel)]="application.email"
+      name="email"
+      required
+    />
+    <input
+      type="text"
+      placeholder="Phone Number"
+      [(ngModel)]="application.phone"
+      name="phone"
+    />
+
+    <label>Upload Resume</label>
+    <input type="file" (change)="onFileSelect($event)" />
+    <p *ngIf="application.resume">Selected File: {{ application.resume }}</p>
+
+    <textarea
+      placeholder="Cover Letter"
+      [(ngModel)]="application.coverLetter"
+      name="coverLetter"
+    ></textarea>
+
+    <button type="submit">Submit Application</button>
+  </form>
+</div>

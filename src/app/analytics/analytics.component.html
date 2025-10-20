@@ -1,0 +1,47 @@
+<nav class="navbar">
+  <div class="logo" (click)="toHome()">JobFinder</div>
+
+  <div class="nav-links">
+    <button (click)="toPost()">Post Job</button>
+    <button (click)="toManage()">Manage Jobs</button>
+    <button (click)="toApplications()">Applications</button>
+    <button (click)="toAnalytics()">Analytics</button>
+  </div>
+</nav>
+
+
+<div class="analytics">
+  <h2>Analytics Dashboard</h2>
+
+  <div class="stats-cards">
+    <div class="stat-card gradient1">
+      <h3>Total Jobs Posted</h3>
+      <p>{{ totalJobs }}</p>
+      <span>Keep your job postings active to attract more candidates.</span>
+    </div>
+
+    <div class="stat-card gradient2">
+      <h3>Total Applications</h3>
+      <p>{{ totalApplications }}</p>
+      <span>Track all incoming applications efficiently.</span>
+    </div>
+
+    <div class="stat-card gradient3">
+      <h3>Applied</h3>
+      <p>{{ statusCount.Applied }}</p>
+      <span>Jobs that candidates have applied for.</span>
+    </div>
+
+    <div class="stat-card gradient4">
+      <h3>Reviewed</h3>
+      <p>{{ statusCount.Reviewed }}</p>
+      <span>Applications that have been reviewed by employers.</span>
+    </div>
+
+    <div class="stat-card gradient5">
+      <h3>Rejected</h3>
+      <p>{{ statusCount.Rejected }}</p>
+      <span>Applications that were not selected.</span>
+    </div>
+  </div>
+</div>
