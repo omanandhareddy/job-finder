@@ -10,6 +10,7 @@ import { ApplicationsDashboardComponent } from './applications-dashboard/applica
 import { AnalyticsComponent } from './analytics/analytics.component';
 
 export const routes: Routes = [
+  {path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponentComponent },
   { path: 'post', component: PostJobComponent },
   { path: 'manage-jobs', component: ManageJobsComponent },
