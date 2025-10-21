@@ -59,8 +59,8 @@
         </td>
 
         <td>
-          <button *ngIf="editJob?.id !== job.id" (click)="startEdit(job)" class="edit-btn">Edit</button>
-          <button *ngIf="editJob?.id === job.id" (click)="saveEdit()" class="save-btn">Save</button>
+          <button *ngIf="editJob?.id !== job.id" (click)="startEdit(job)" class="edit-btn">✏️</button>
+          <button *ngIf="editJob?.id === job.id" (click)="saveEdit()" class="save-btn">🗑️</button>
           <button (click)="deleteJob(job.id)" class="delete-btn">Delete</button>
         </td>
       </tr>

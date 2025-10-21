@@ -38,6 +38,7 @@
   border-color: #000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background: #fff;
+  
 }
 
 .form-container textarea {
@@ -166,4 +167,10 @@ body {
   background: var(--gradient);
   color: var(--text-color);
   overflow-x: hidden;
+}
+.form-container input {
+  margin: 7px;
+}
+textarea{
+  margin: 5px;
 }
